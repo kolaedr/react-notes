@@ -10,12 +10,9 @@ export const Form = () => {
   const submitHandler = (e) => {
     e.preventDefault();
     if (value.trim()) {
-      //...payload
-      
       firebase
         .addNote(value.trim())
         .then(() => {
-          console.log('111111 :>> ', 111111);
           alert.show("Creat notes", "success");
         })
         .catch((err) => {
